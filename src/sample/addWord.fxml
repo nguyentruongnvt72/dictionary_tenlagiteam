@@ -12,79 +12,73 @@
 
 <AnchorPane fx:id="children" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Scene2Controller">
    <children>
-      <AnchorPane layoutY="-1.0" prefHeight="86.0" prefWidth="909.0" style="-fx-background-color: #6680e6;">
+      <AnchorPane layoutY="-1.0" prefHeight="53.0" prefWidth="909.0" style="-fx-background-color: #6680e6;">
          <children>
-            <Label layoutX="315.0" layoutY="18.0" prefHeight="56.0" prefWidth="346.0" text="DICTIONARY">
-               <font>
-                  <Font size="46.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="101.0" fitWidth="90.0" layoutX="9.0" layoutY="-6.0">
+            <ImageView fitHeight="57.0" fitWidth="53.0" layoutX="8.0" layoutY="4.0">
                <image>
                   <Image url="@../image/Asset1.png" />
                </image>
             </ImageView>
-            <Button layoutX="108.0" layoutY="18.0" mnemonicParsing="false" onAction="#buttonBoardBack" prefHeight="27.0" prefWidth="27.0" />
-            <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="109.0" layoutY="20.0">
-               <image>
-                  <Image url="@../image/keyboard-left-arrow-button.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="136.0" layoutY="18.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="27.0" />
-            <ImageView fitHeight="23.0" fitWidth="23.0" layoutX="138.0" layoutY="20.0">
-               <image>
-                  <Image url="@../image/keyboard-right-arrow-button.png" />
-               </image>
-            </ImageView>
+            <Label layoutX="390.0" layoutY="17.0" prefHeight="23.0" prefWidth="145.0" text="DICTIONARY">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
-      <AnchorPane layoutY="93.0" prefHeight="582.0" prefWidth="98.0" style="-fx-background-color: #6680e6;">
+      <AnchorPane layoutY="58.0" prefHeight="571.0" prefWidth="67.0" style="-fx-background-color: #6680e6;">
          <children>
-            <Button layoutX="29.0" layoutY="122.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="38.0" />
-            <ImageView fitHeight="42.0" fitWidth="41.0" layoutX="28.0" layoutY="120.0">
-               <image>
-                  <Image url="@../image/plus-symbol-in-a-rounded-black-square.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="36.0" layoutY="189.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="27.0" />
-            <ImageView fitHeight="38.0" fitWidth="53.0" layoutX="22.0" layoutY="183.0">
-               <image>
-                  <Image url="@../image/rubbish-bin.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="40.0" layoutY="324.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="13.0" />
-            <ImageView fitHeight="44.0" fitWidth="38.0" layoutX="30.0" layoutY="316.0">
-               <image>
-                  <Image url="@../image/friends.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="39.0" layoutY="259.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="17.0" />
-            <ImageView fitHeight="41.0" fitWidth="50.0" layoutX="24.0" layoutY="252.0">
-               <image>
-                  <Image url="@../image/settings-work-tool.png" />
-               </image>
-            </ImageView>
+            <Button layoutY="97.0" mnemonicParsing="false" onAction="#handle" prefHeight="47.0" prefWidth="65.0" style="-fx-background-color: #6680e6;">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="37.0">
+                     <image>
+                        <Image url="@../image/plus-symbol-in-a-rounded-black-square.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="2.0" layoutY="161.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="65.0" style="-fx-background-color: #6680e6;">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="45.0">
+                     <image>
+                        <Image url="@../image/rubbish-bin.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutX="-4.0" layoutY="275.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="70.0" style="-fx-background-color: #6680e6;">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="37.0">
+                     <image>
+                        <Image url="@../image/friends.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button layoutY="219.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="65.0" style="-fx-background-color: #6680e6;">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="38.0">
+                     <image>
+                        <Image url="@../image/settings-work-tool.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="532.0" layoutY="110.0" prefHeight="548.0" prefWidth="357.0" style="-fx-background-color: #e6e6e6;" />
-      <AnchorPane layoutX="123.0" layoutY="111.0" prefHeight="548.0" prefWidth="337.0" style="-fx-background-color: #e6e6e6;">
+      <AnchorPane layoutX="490.0" layoutY="81.0" prefHeight="526.0" prefWidth="354.0" style="-fx-background-color: #e6e6e6;">
          <children>
-            <Label layoutX="47.0" layoutY="73.0" prefHeight="32.0" prefWidth="139.0" text="Word Target">
-               <font>
-                  <Font name="Arial" size="22.0" />
-               </font>
-            </Label>
-            <TextField fx:id="InputTarget" layoutX="56.0" layoutY="113.0" prefHeight="31.0" prefWidth="196.0" />
-            <Label layoutX="48.0" layoutY="231.0" text="Word Explain">
-               <font>
-                  <Font name="Arial" size="22.0" />
-               </font>
-            </Label>
-            <TextField fx:id="InputExplain" layoutX="60.0" layoutY="261.0" prefHeight="30.0" prefWidth="187.0" />
-            <Button layoutX="206.0" layoutY="372.0" mnemonicParsing="false" onMouseClicked="#mouseSave" prefHeight="36.0" prefWidth="86.0" style="-fx-background-color: #6fe2c7;" text="Save" textFill="#3c794a">
+            <WebView fx:id="webViewExplain" layoutX="17.0" layoutY="19.0" opacity="0.67" prefHeight="484.0" prefWidth="319.0" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="92.0" layoutY="80.0" onKeyReleased="#update" prefHeight="527.0" prefWidth="386.0" style="-fx-background-color: #e6e6e6;">
+         <children>
+            <Button layoutX="326.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#handleClickListViewSearch" opacity="0.89" prefHeight="37.0" prefWidth="45.0" />
+            <ImageView fitHeight="19.0" fitWidth="21.0" layoutX="338.0" layoutY="26.0" onMouseClicked="#handleClickListViewSearch" opacity="0.84">
+               <image>
+                  <Image url="@../image/musica-searcher.png" />
+               </image>
+            </ImageView>
+            <ListView fx:id="listView" fixedCellSize="25.0" layoutX="40.0" layoutY="65.0" onMouseClicked="#handleClickListViewMou" opacity="0.6" prefHeight="440.0" prefWidth="307.0" snapToPixel="false" />
+            <TextField fx:id="Input" layoutX="19.0" layoutY="17.0" onKeyReleased="#update" prefHeight="37.0" prefWidth="307.0" promptText="Search">
                <font>
                   <Font size="19.0" />
                </font>
-            </Button>
+            </TextField>
          </children>
       </AnchorPane>
    </children>

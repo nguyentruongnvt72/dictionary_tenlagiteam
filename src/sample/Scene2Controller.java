@@ -1,5 +1,6 @@
 package sample;
 import dictionary.DictionaryCommandline;
+import dictionary.Word;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,9 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import dictionary.Word;
 
-import java.awt.event.MouseEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -17,7 +16,7 @@ import java.util.ResourceBundle;
  *
  * @author Genuine Coder
  */
-public class Scene2Controller implements Initializable {
+public class Scene2Controller extends Controller implements Initializable {
     @FXML
     DictionaryCommandline dictionaryCommandline2 = new DictionaryCommandline();
     @FXML
