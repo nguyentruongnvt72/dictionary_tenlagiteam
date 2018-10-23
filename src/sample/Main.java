@@ -15,12 +15,11 @@ import javafx.stage.Stage;
 //import javafx.scene.image.ImageView;
 
 public class Main extends Application {
-
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Dictionary");
-        primaryStage.setScene(new Scene(root, 900, 750));
+        primaryStage.setScene(new Scene(root, 909, 675));
         primaryStage.show();
     }
     public static void main(String[] args) {

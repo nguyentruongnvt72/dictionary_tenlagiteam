@@ -10,8 +10,8 @@ import java.io.IOException;
 
 public class DictionaryManagement {
 
-    ArrayList<Word> result = new ArrayList<>();
-    ArrayList<Word> words = new ArrayList<>();
+    public ArrayList<Word> result = new ArrayList<>();
+    //ArrayList<Word> words = new ArrayList<>();
 
     public DictionaryManagement() {
         this.insertFromFile();
@@ -27,30 +27,23 @@ public class DictionaryManagement {
 
         return new Word(word_target.toLowerCase(), word_explain.toLowerCase());
     }
-    public Dictionary insertFromCommandline() {
-        Dictionary dictionary = new Dictionary();
-        Scanner input = new Scanner(System.in);
-        System.out.println("input the number of word: ");
-        int number = input.nextInt();
-        for (int i = 0; i < number; i++) {
-            dictionary.push( setNewWord() );
-        }
-
-        return dictionary;
+    public void insertFromCommandline(String wordtarget, String wordexplain) {
+        Word addWord = new Word(wordtarget, wordexplain);
+        result.add(addWord);
     }
 
     public void insertFromFile(){
         String[] wordsAdd;
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader("/Users/truongnguyen/dictionary/src/E_V.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("/Users/truongnguyen/Documents/dictionary/src/E_V.txt"));
             String line = "";
             while ((line = br.readLine()) != null) {
                 wordsAdd = line.split("<html>");
                 if (wordsAdd.length >= 2) {
                     Word word = new Word(wordsAdd[0], wordsAdd[1]);
                     result.add(word);
-                    words.add(word);
+                    //words.add(word);
                 }
             }
             br.close();
@@ -110,8 +103,8 @@ public class DictionaryManagement {
     private int binarySearcher(int start, int end, String spelling) {
         if (end < start) return -1;
         int mid = start + (end - start) / 2;
-        Word word = words.get(mid);
-        String currentSpelling = word.getSpelling();
+        Word word = result.get(mid);
+        String currentSpelling = word.getWord_target();
         if (currentSpelling.startsWith(spelling)) {
             return mid;
         }
@@ -122,32 +115,35 @@ public class DictionaryManagement {
     }
 
 
-    public ArrayList<Word> searcher(String spelling) {
-        ArrayList<Word> resultNew = new ArrayList<>();
-        int index =  binarySearcher(0, words.size() - 1, spelling);
+    public ArrayList<String> searcher(String spelling) {
+        //ArrayList<Word> resultNew = new ArrayList<>();
+        ArrayList<String> resultnew = new ArrayList<>();
+
+        int index =  binarySearcher(0, result.size() - 1, spelling);
 //        int index = -1;
         if (index >= 0) {
-            resultNew.add(words.get(index));
+            resultnew.add(result.get(index).getWord_target());
             int left = index - 1, right = index + 1;
 
             while (left >= 0) {
-                Word leftWord = words.get(left--);
-                if (leftWord.getSpelling().startsWith(spelling))
-                    resultNew.add(leftWord);
+                Word leftWord = result.get(left--);
+                if (leftWord.getWord_target().startsWith(spelling))
+                    resultnew.add(leftWord.getWord_target());
+                    //resultnew.add(resultNew.getWord_target());
                 else
                     break;
             }
 
-            int length = words.size();
+            int length = result.size();
             while (right < length) {
-                Word leftWord = words.get(right++);
-                if (leftWord.getSpelling().startsWith(spelling))
-                    resultNew.add(leftWord);
+                Word leftWord = result.get(right++);
+                if (leftWord.getWord_target().startsWith(spelling))
+                    resultnew.add(leftWord.getWord_target());
                 else
                     break;
             }
         }
-        return resultNew;
+        return resultnew;
     }
 
 

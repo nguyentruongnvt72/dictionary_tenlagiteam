@@ -21,8 +21,8 @@ public class Word {
     public String getWord_explain(){
         return word_explain;
     }
-    public String getSpelling() {
-        return word_target;
-    }
+//    public String getSpelling() {
+//        return word_target;
+//    }
 
 }

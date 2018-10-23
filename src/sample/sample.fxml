@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
@@ -22,25 +23,67 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.web.WebView?>
 
-<Pane prefHeight="768.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<Pane fx:id="rootPane" prefHeight="735.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ImageView fitHeight="773.0" fitWidth="918.0" layoutX="-6.0" layoutY="-2.0" opacity="0.85">
-         <image>
-            <Image url="@../image/hinh-nen-manchester-united-1.jpg" />
-         </image>
-      </ImageView>
-      <WebView fx:id="webViewExplain" layoutX="482.0" layoutY="198.0" opacity="0.67" prefHeight="533.0" prefWidth="374.0" />
-      <ListView fx:id="listView" fixedCellSize="25.0" layoutX="120.0" layoutY="233.0" onMouseClicked="#handleClickListView" opacity="0.6" prefHeight="509.0" prefWidth="248.0" snapToPixel="false" />
-      <TextField fx:id="Input" layoutX="120.0" layoutY="198.0" onKeyReleased="#update" opacity="0.78" prefHeight="37.0" prefWidth="204.0" promptText="Search" />
-      <Button layoutX="323.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#handleClickListViewSearch" opacity="0.89" prefHeight="37.0" prefWidth="45.0">
-         <graphic>
-            <ImageView fitHeight="19.0" fitWidth="21.0" onMouseClicked="#handleClickListViewSearch" opacity="0.84">
+      <AnchorPane layoutY="-1.0" prefHeight="86.0" prefWidth="909.0" style="-fx-background-color: #6680e6;">
+         <children>
+            <Label layoutX="315.0" layoutY="18.0" prefHeight="56.0" prefWidth="346.0" text="DICTIONARY">
+               <font>
+                  <Font size="46.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="101.0" fitWidth="90.0" layoutX="9.0" layoutY="-6.0">
+               <image>
+                  <Image url="@../image/Asset1.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane layoutY="93.0" prefHeight="582.0" prefWidth="98.0" style="-fx-background-color: #6680e6;">
+         <children>
+            <Button layoutX="29.0" layoutY="122.0" mnemonicParsing="false" onAction="#handle" prefHeight="38.0" prefWidth="38.0" />
+            <ImageView fitHeight="42.0" fitWidth="41.0" layoutX="28.0" layoutY="120.0">
+               <image>
+                  <Image url="@../image/plus-symbol-in-a-rounded-black-square.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="36.0" layoutY="189.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="27.0" />
+            <ImageView fitHeight="38.0" fitWidth="53.0" layoutX="22.0" layoutY="183.0">
+               <image>
+                  <Image url="@../image/rubbish-bin.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="40.0" layoutY="324.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="13.0" />
+            <ImageView fitHeight="44.0" fitWidth="38.0" layoutX="30.0" layoutY="316.0">
+               <image>
+                  <Image url="@../image/friends.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="39.0" layoutY="259.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="17.0" />
+            <ImageView fitHeight="41.0" fitWidth="50.0" layoutX="24.0" layoutY="252.0">
+               <image>
+                  <Image url="@../image/settings-work-tool.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="525.0" layoutY="160.0" prefHeight="548.0" prefWidth="357.0" style="-fx-background-color: #e6e6e6;">
+         <children>
+            <WebView fx:id="webViewExplain" layoutX="15.0" layoutY="15.0" opacity="0.67" prefHeight="521.0" prefWidth="329.0" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="120.0" layoutY="162.0" prefHeight="547.0" prefWidth="386.0" style="-fx-background-color: #e6e6e6;">
+         <children>
+            <TextField fx:id="Input" layoutX="9.0" layoutY="11.0" onKeyReleased="#update" opacity="0.78" prefHeight="47.0" prefWidth="321.0" promptText="Search" />
+            <Button layoutX="336.0" layoutY="17.0" mnemonicParsing="false" onMouseClicked="#handleClickListViewSearch" opacity="0.89" prefHeight="37.0" prefWidth="45.0" />
+            <ImageView fitHeight="19.0" fitWidth="21.0" layoutX="348.0" layoutY="26.0" onMouseClicked="#handleClickListViewSearch" opacity="0.84">
                <image>
                   <Image url="@../image/musica-searcher.png" />
                </image>
             </ImageView>
-         </graphic>
-      </Button>
-      <AnchorPane layoutX="-3.0" layoutY="-2.0" prefHeight="83.0" prefWidth="912.0" style="-fx-background-color: #6680e6;" />
+            <ListView fx:id="listView" fixedCellSize="25.0" layoutX="21.0" layoutY="68.0" onMouseClicked="#handleClickListViewMou" opacity="0.6" prefHeight="456.0" prefWidth="311.0" snapToPixel="false" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="InputTarget" layoutX="441.0" layoutY="114.0" />
+      <TextField fx:id="InputExplain" layoutX="633.0" layoutY="114.0" />
+      <Button layoutX="818.0" layoutY="114.0" mnemonicParsing="false" onMouseClicked="#mouseSave" text="Save" />
    </children>
 </Pane>

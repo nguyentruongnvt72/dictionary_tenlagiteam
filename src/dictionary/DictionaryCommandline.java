@@ -35,5 +35,10 @@ public class DictionaryCommandline extends DictionaryManagement{
         }
         return ADD;
     }
+    public void adfsd() {
+        Word abc = new Word();
+        abc.setWord_target("Adas");
+        abc.getWord_target();
+    }
 
 }
